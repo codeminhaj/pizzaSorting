@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>640</width><height>300</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>tcrt_counter</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,1">
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text">
+       <string>TCRT1000 Counters (20% steps to 40 counts)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Sensor A row -->
+    <item>
+     <layout class="QHBoxLayout" name="rowA">
+      <item>
+       <widget class="QLabel" name="labelA">
+        <property name="text">
+         <string>Sensor A: 0 / 40 (0%)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressA">
+        <property name="value"><number>0</number></property>
+        <property name="minimum"><number>0</number></property>
+        <property name="maximum"><number>100</number></property>
+        <property name="textVisible"><bool>true</bool></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- Sensor B row -->
+    <item>
+     <layout class="QHBoxLayout" name="rowB">
+      <item>
+       <widget class="QLabel" name="labelB">
+        <property name="text">
+         <string>Sensor B: 0 / 40 (0%)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressB">
+        <property name="value"><number>0</number></property>
+        <property name="minimum"><number>0</number></property>
+        <property name="maximum"><number>100</number></property>
+        <property name="textVisible"><bool>true</bool></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- Controls row -->
+    <item>
+     <layout class="QHBoxLayout" name="controlsRow">
+      <item><spacer name="hSpacer">
+        <property name="orientation"><enum>Qt::Horizontal</enum></property>
+        <property name="sizeHint" stdset="0">
+         <size><width>40</width><height>20</height></size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnReset">
+        <property name="text"><string>Reset</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- Hint -->
+    <item>
+     <widget class="QLabel" name="labelHint">
+      <property name="text">
+       <string>Wiring...</string>
+      </property>
+      <property name="wordWrap"><bool>true</bool></property>
+     </widget>
+    </item>
+
+    <item>
+     <spacer name="vSpacer">
+      <property name="orientation"><enum>Qt::Vertical</enum></property>
+      <property name="sizeHint" stdset="0">
+       <size><width>20</width><height>40</height></size>
+      </property>
+     </spacer>
+    </item>
+
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
